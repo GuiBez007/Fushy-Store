@@ -4,4 +4,8 @@ document.addEventListener("mousemove", e => { mouse.x = e.clientX; mouse.y = e.c
 document.addEventListener("mousedown", () => mouse.isdown = true)
 document.addEventListener("mouseup"  , () => mouse.isdown = false)
 
+document.addEventListener("touchmove",   e => { const a = e.touches[0]; mouse.x = a.clientX; mouse.y = a.clientY })
+document.addEventListener("touchstart", () => mouse.isdown = true)
+document.addEventListener("touchend"  , () => mouse.isdown = false)
+
 export default mouse
