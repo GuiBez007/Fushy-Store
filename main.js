@@ -1,15 +1,16 @@
-import Canv from "./MyObjects/Canv.js"
-import InputColor from "./MyObjects/InputColor.js"
-import InputGrid from "./MyObjects/InputGrid.js"
-import Elem from "./Objects/Elem.js"
-import { run } from "./system.js"
+import ButtonColor from "./Objects/ButtonColor.js"
+import CanvasDraw  from "./Objects/CanvasDraw.js"
+import { run }     from "./system.js"
 
 function main() {
-    new Canv({ position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)", border: "1px solid", borderRadius: "5px" })
-    new InputColor()
-    new InputGrid()
+    new CanvasDraw()
+    new ButtonColor(1)
+    new ButtonColor(2)
+    new ButtonColor(3)
+    new ButtonColor(4)
+    new ButtonColor(5)
+    new ButtonColor(6)
 }
-
 
 main()
 run()

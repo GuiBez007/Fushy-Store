@@ -1,18 +1,14 @@
-import { wl, ol } from "../system.js"
+import { listA, listB } from "../system.js"
 
 export default class Elem {
-    constructor(style={}) {
+    /** @type {HTMLElement} */ ELEM
+    VAL
+
+    constructor(val=null) {
+        this.VAL = val
         this.ELEM = document.createElement(this.type())
         document.body.append(this.ELEM)
-
-        const a = Object.keys(style)
-
-        for (let i=0; i<a.length; i++) {
-            const k = a[i]
-            this.ELEM.style[k] = style[k]
-        }
-
-        wl.push(this)
+        listA.push(this)
     }
 
     type() {
@@ -27,9 +23,17 @@ export default class Elem {
 
     }
 
+    startdraw() {
+
+    }
+
+    updatedraw() {
+
+    }
+
     find(func) {
-        for (let i=0; i<ol.length; i++) {
-            if (func(ol[i])) return ol[i]
+        for (let i=0;i<listB.length;i++) {
+            if (func(listB[i])) return listB[i]
         }
     }
 }

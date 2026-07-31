@@ -1,4 +1,4 @@
-import Elem from "../Objects/Elem.js"
+import Elem from "./Elem.js"
 
 export default class Sample extends Elem {
     type() {
@@ -10,6 +10,14 @@ export default class Sample extends Elem {
     }
 
     update() {
+
+    }
+
+    startdraw() {
+
+    }
+
+    updatedraw() {
 
     }
 }
