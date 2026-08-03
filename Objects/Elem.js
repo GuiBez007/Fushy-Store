@@ -1,39 +1,29 @@
 import { listA, listB } from "../system.js"
 
 export default class Elem {
-    /** @type {HTMLElement} */ ELEM
+    /**@type{HTMLElement}*/ELEM
     VAL
 
     constructor(val=null) {
-        this.VAL = val
-        this.ELEM = document.createElement(this.type())
-        document.body.append(this.ELEM)
+        this.ELEM=document.createElement(this.type())
+        this.VAL=val
+
         listA.push(this)
-    }
 
-    type() {
-        return "div"
-    }
-
-    start() {
-
-    }
-
-    update() {
-
-    }
-
-    startdraw() {
-
-    }
-
-    updatedraw() {
-
+        document.body.append(this.ELEM)
     }
 
     find(func) {
-        for (let i=0;i<listB.length;i++) {
+        for (let i=0; i<listB.length; i++) {
             if (func(listB[i])) return listB[i]
         }
     }
+
+    type() {}
+
+    start()  {}
+    update() {}
+
+    startdraw()  {}
+    updatedraw() {}
 }

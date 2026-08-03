@@ -5,7 +5,7 @@ export default class Sample extends Elem {
         return "div"
     }
 
-    start() {
+    start()  {
 
     }
 
@@ -13,7 +13,7 @@ export default class Sample extends Elem {
 
     }
 
-    startdraw() {
+    startdraw()  {
 
     }
 
